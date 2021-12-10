@@ -1,0 +1,3 @@
+rootProject.name = "TheMeal"
+include ':app'
+include ':helper:network'

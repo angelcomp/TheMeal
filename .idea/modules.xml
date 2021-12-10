@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TheMeal.iml" filepath="$PROJECT_DIR$/.idea/modules/TheMeal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TheMeal.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TheMeal.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/helper/TheMeal.helper.iml" filepath="$PROJECT_DIR$/.idea/modules/helper/TheMeal.helper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/helper/network/TheMeal.helper.network.iml" filepath="$PROJECT_DIR$/.idea/modules/helper/network/TheMeal.helper.network.iml" />
+    </modules>
+  </component>
+</project>
