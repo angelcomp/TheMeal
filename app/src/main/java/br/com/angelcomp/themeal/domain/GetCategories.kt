@@ -15,5 +15,5 @@ class GetCategories(
 }
 
 interface GetCategoriesUseCase{
-    suspend fun invoke(): List<Category>
+    suspend operator fun invoke(): List<Category>
 }
