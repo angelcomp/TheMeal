@@ -8,6 +8,7 @@ import br.com.angelcomp.themeal.presenter.model.CategoryUiModel
 import coil.load
 
 class CategoriesAdapter(
+    private val listener: OnItemClickListener,
     private val categories: List<CategoryUiModel>
 ): RecyclerView.Adapter<CategoriesAdapter.CategoriesViewHolder>() {
 
@@ -16,12 +17,20 @@ class CategoriesAdapter(
         return CategoriesViewHolder(itemView)
     }
 
+    interface OnItemClickListener {
+        fun viewFavoriteDetails(position: Int)
+    }
+
     override fun onBindViewHolder(holder: CategoriesViewHolder, position: Int) {
         val category = categories[position]
 
         with(holder) {
             binding.tvMeal.text = category.name
             binding.ivMeal.load(category.thumb)
+        }
+
+        holder.itemView.setOnClickListener {
+            listener.viewFavoriteDetails(position)
         }
     }
 

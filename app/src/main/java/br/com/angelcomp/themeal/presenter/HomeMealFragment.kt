@@ -10,9 +10,10 @@ import br.com.angelcomp.themeal.R
 import br.com.angelcomp.themeal.databinding.FragmentHomeMealBinding
 import br.com.angelcomp.themeal.presenter.adapter.CategoriesAdapter
 import br.com.angelcomp.themeal.presenter.model.CategoryUiModel
+import br.com.angelcomp.themeal.presenter.view.DialogFragment
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class HomeMealFragment : Fragment() {
+class HomeMealFragment : Fragment(), CategoriesAdapter.OnItemClickListener {
 
     private val viewModel: MealViewModel by sharedViewModel()
 
@@ -37,6 +38,12 @@ class HomeMealFragment : Fragment() {
     }
 
     private fun populateMealCategory(categories: List<CategoryUiModel>) {
-        binding.rvMeals.adapter = CategoriesAdapter(categories)
+        binding.rvMeals.adapter = CategoriesAdapter(this, categories)
+    }
+
+    override fun viewFavoriteDetails(position: Int) {
+        val dialog = viewModel.categories.value?.get(position)?.let { DialogFragment(it) }
+        dialog?.show(parentFragmentManager, dialog.tag)
+
     }
 }
