@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import br.com.angelcomp.themeal.R
 import br.com.angelcomp.themeal.databinding.FragmentHomeMealBinding
+import br.com.angelcomp.themeal.presenter.adapter.CategoriesAdapter
 import br.com.angelcomp.themeal.presenter.model.CategoryUiModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
@@ -36,6 +37,6 @@ class HomeMealFragment : Fragment() {
     }
 
     private fun populateMealCategory(categories: List<CategoryUiModel>) {
-
+        binding.rvMeals.adapter = CategoriesAdapter(categories)
     }
 }

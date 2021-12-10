@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/meal_nav_graph.xml">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/meal_nav_graph.xml"
+    app:startDestination="@id/homeMealFragment">
 
+    <fragment
+        android:id="@+id/homeMealFragment"
+        android:name="br.com.angelcomp.themeal.presenter.HomeMealFragment"
+        android:label="HomeMealFragment"
+        tools:layout="@layout/fragment_home_meal"/>
 </navigation>

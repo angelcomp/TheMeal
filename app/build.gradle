@@ -31,8 +31,8 @@ android {
         jvmTarget = '1.8'
     }
 
-    viewBinding {
-        enabled = true
+    buildFeatures {
+        viewBinding = true
     }
 }
 
@@ -61,4 +61,5 @@ dependencies {
     api "org.koin:koin-androidx-viewmodel:$koin_version"
 
     implementation project(":helper:network")
+    implementation("io.coil-kt:coil:1.1.1")
 }

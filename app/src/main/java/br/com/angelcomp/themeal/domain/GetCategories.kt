@@ -2,7 +2,6 @@ package br.com.angelcomp.themeal.domain
 
 import br.com.angelcomp.themeal.data.MealRepository
 import br.com.angelcomp.themeal.domain.model.Category
-import java.lang.Exception
 
 class GetCategories(
     private val mealRepository: MealRepository

@@ -4,14 +4,14 @@ import br.com.angelcomp.themeal.domain.model.Category
 
 data class CategoryResponse(
     val idCategory: String,
-    val strName: String,
+    val strCategory: String,
     val strCategoryThumb: String,
     val strCategoryDescription: String,
 )
 
 fun CategoryResponse.toCategory() = Category(
     id = this.idCategory,
-    name = this.strName,
+    name = this.strCategory,
     thumb = this.strCategoryThumb,
     description = this.strCategoryDescription
 )

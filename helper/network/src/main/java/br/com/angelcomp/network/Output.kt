@@ -8,7 +8,7 @@ sealed class Output<out Response> {
     data class Failure(val statusCode: Int): Output<Nothing>()
 }
 
-fun <R: Any> Response<R>.paseResponse(): Output<R> {
+fun <R: Any> Response<R>.parseResponse(): Output<R> {
     if (isSuccessful) {
         val body = body()
 

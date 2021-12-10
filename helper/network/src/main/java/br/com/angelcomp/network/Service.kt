@@ -6,13 +6,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 private const val BASE_URL = "https://www.themealdb.com/api/json/"
-private const val API_VERSION = "v1/1"
+private const val API_VERSION = "v1/1/"
 
 class Service {
 
     private val retrofit = Retrofit.Builder()
-        .baseUrl(BASE_URL)
-        .client(OkHttpClient.Builder().addInterceptor(HttpLoggingInterceptor()).build())
+        .baseUrl(BASE_URL + API_VERSION)
+        .client(OkHttpClient.Builder().addInterceptor(logInterceptor()).build())
         .addConverterFactory(MoshiConverterFactory.create())
         .build()
 

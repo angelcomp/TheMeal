@@ -1,5 +1,5 @@
 package br.com.angelcomp.network
 
-abstract class BaseResponse<Data> {
-    abstract val categories: List<Data>
-}
+class BaseResponse<Data> (
+    val categories: List<Data>
+)
